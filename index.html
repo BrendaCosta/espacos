@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Encontre espaços para seu próximo evento em Salvador. Conheça opções, estrutura e comodidades no Meu Espaço.">
+  <meta name="theme-color" content="#173d32">
+  <title>Meu Espaço — encontre o lugar ideal para seu evento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="src/espacos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Meu Espaço, início"><span class="brand-mark">M</span><span>meu<span class="brand-light">espaço</span></span></a>
+    <nav><a href="#explorar">Explorar espaços</a><a href="#sobre">Como funciona</a><a class="nav-cta" href="#anuncie">Quero anunciar</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="dot"></span> SEU EVENTO COMEÇA AQUI</span>
+        <h1>O lugar certo<br>faz tudo <em>acontecer.</em></h1>
+        <p>Descubra espaços especiais para reunir, celebrar e criar momentos inesquecíveis.</p>
+        <a class="hero-link" href="#explorar">Encontre seu espaço <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card art-card-back"></div><div class="art-card art-card-front"><span>bons encontros<br>moram aqui.</span><b>✳</b></div>
+        <span class="art-spark">✳</span><span class="art-caption">SALVADOR, BA</span>
+      </div>
+      <div class="hero-bottom"><span>ESPAÇOS PARA VIVER MOMENTOS</span><span>01 — DESCUBRA</span></div>
+    </section>
+
+    <section class="search-section" id="explorar">
+      <div class="section-heading"><div><span class="eyebrow">EXPLORE POSSIBILIDADES</span><h2>Encontre seu próximo lugar.</h2></div><p>Uma seleção para diferentes encontros,<br>celebrações e ocasiões.</p></div>
+      <div class="search-panel">
+        <label class="search-field"><span>O que você procura?</span><input id="searchInput" type="search" placeholder="Nome, bairro ou comodidade..."></label>
+        <label class="search-field"><span>Tipo de espaço</span><select id="categoryFilter"><option value="">Todas as categorias</option><option>Bar e restaurante</option></select></label>
+        <label class="search-field"><span>Comodidade</span><select id="amenityFilter"><option value="">Todas</option><option>Ambiente climatizado</option><option>Karaokê</option><option>Sinuca</option></select></label>
+        <button class="search-button" id="clearFilters" type="button" aria-label="Limpar filtros">↺</button>
+      </div>
+      <div class="results-line"><span id="resultCount">1 espaço encontrado</span><span>CURADORIA LOCAL · SALVADOR</span></div>
+      <div class="spaces-grid" id="spacesGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>Nenhum espaço por aqui ainda.</h3><p>Tente ajustar sua busca ou remover algum filtro.</p></div>
+    </section>
+
+    <section class="feature-band" id="sobre">
+      <div class="feature-symbol">✳</div><div><span class="eyebrow">MENOS TEMPO PROCURANDO</span><h2>Mais tempo vivendo<br>o que importa.</h2></div>
+      <p>O Meu Espaço aproxima você de lugares que combinam com a ocasião. Explore, conheça os detalhes e fale diretamente com o estabelecimento.</p>
+    </section>
+
+    <section class="owner-section" id="anuncie">
+      <div><span class="eyebrow">SEU ESPAÇO MERECE SER ENCONTRADO</span><h2>Tem um lugar<br>para compartilhar?</h2><p>Apresente seu espaço para pessoas que estão planejando o próximo evento.</p></div>
+      <a href="mailto:contato@meuespaco.com.br?subject=Quero%20anunciar%20meu%20espa%C3%A7o" class="owner-button">Quero anunciar <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">M</span><span>meu<span class="brand-light">espaço</span></span></a><span>Encontre um lugar para cada história.</span><span>© 2026 Meu Espaço</span></footer>
+
+  <dialog id="spaceDialog" class="space-dialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Fechar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+</body>
+</html>
